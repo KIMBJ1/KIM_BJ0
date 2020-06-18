@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block title %}
+Calculator
+{% endblock %}
+{% block body %}
+<form method="POST" action="/calculate2">
+    <input type="text" name="num">
+    <input type="text" name="num2">
+    <button type="submit" name="plus">덧셈 연산</button>
+    <button type="submit" name="minus">뺄셈 연산</button>
+</form>
+<div>
+    <p>
+        {% if num == None %}
+            {% if num2 == None %}
+                <h5> 숫자 입력이 안되었습니다. </h5>
+            {% else %}
+                <h5> 숫자1 입력이 안되었습니다. </h5>
+            {% endif %}
+        {% elif num2 == None %}
+            <h5> 숫자2 입력이 안되었습니다. </h5>
+        {% else %}
+            {% if cal == '+' %}
+                <p>{{num}} + {{num2}} = {{num3}}</br></p>
+            {% elif cal == '-' %}
+                <p>{{num}} - {{num2}} = {{num3}}</br></p>
+            {% else %}
+                <h5> 연산 오류 </h5>
+            {% endif %}
+        {% endif %}
+    </p>
+</div>
+{% endblock %}
