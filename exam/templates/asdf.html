@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>HTML 문서</title>
+
+</head>
+<body>
+<table border="1">
+     <tr>
+         <td width = 100><b>과목명</b></td>
+         <td width = 100><b>담당교원</b></td>
+         <td width = 100><b><u>메모장</u></b></td>
+     </tr>
+<tr>
+        <td>머신러닝</td>
+        <td>이종태 교수님</td>
+        <td align='center'><form><input type=button value="이동" onclick="location.href = 'note.html'"></form></td>
+        </td>
+    </tr>
+    <tr>
+        <td>정보시스템 통합 및 실습</td>
+        <td>간자르 교수님</td>
+        <td align='center'><form><input type=submit value="이동"></form></td>
+        </td>
+    </tr>
+    <tr>
+        <td>산업 AI</td>
+        <td>우딘 교수님</td>
+        <td align='center'><form><input type=submit value="이동"></form></td>
+        </td>
+    </tr>
+    <tr>
+        <td colspan = '3'>기능</td>
+        </td>
+    </tr>
+    <tr>
+        <td>계산기</td>
+        <td colspan = '2' align='center'><form><input type=submit value="이동"></form></td>
+        </td>
+    </tr>
+</table>
+</table>
+{% block table %}
+{% endblock %}
+</body>
+</html>
